@@ -3,9 +3,9 @@ import React from 'react';
 import { Eye } from 'lucide-react';
 
 const projects = [
-  { id: '346157436', part: 'Table name', project: 'Project name', measurement: '123.4 m²', material: 'Maple' },
-  { id: '12346232', part: 'Table name', project: 'Project name', measurement: '742.8 m²', material: 'Granite' },
-  { id: '346157236', part: 'Table name', project: 'Project name', measurement: '24.1 m²', material: 'Onyx' }
+  { id: '69892431', task: 'Task name', project: 'Project name', size: '123.3 m²', material: 'Marble' },
+  { id: '15485232', task: 'Task name', project: 'Project name', size: '142.8 m²', material: 'Granite' },
+  { id: '36987526', task: 'Task name', project: 'Project name', size: '24.1 m²', material: 'Onyx' }
 ];
 
 const SchedulingCard = () => {
@@ -36,9 +36,9 @@ const SchedulingCard = () => {
         <thead>
           <tr>
             <th>Project Id</th>
-            <th>Table name</th>
+            <th>Task name</th>
             <th>Project name</th>
-            <th>Measurement</th>
+            <th>Size</th>
             <th>Material</th>
           </tr>
         </thead>
@@ -46,9 +46,9 @@ const SchedulingCard = () => {
           {projects.map((item, index) => (
             <tr key={index}>
               <td>{item.id}</td>
-              <td>{item.part}</td>
+              <td>{item.task}</td>
               <td>{item.project}</td>
-              <td>{item.measurement}</td>
+              <td>{item.size}</td>
               <td>{item.material}</td>
             </tr>
           ))}

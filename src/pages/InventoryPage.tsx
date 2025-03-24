@@ -2,6 +2,7 @@
 import React from 'react';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
+import InventoryCard from '@/components/dashboard/InventoryCard';
 
 const InventoryPage = () => {
   return (
@@ -12,11 +13,11 @@ const InventoryPage = () => {
         <Header />
         
         <main className="p-6">
-          <div className="bg-dashboard-card p-6 rounded-lg shadow-lg">
-            <h1 className="text-2xl font-bold mb-6">Inventário</h1>
-            
-            <div className="space-y-6">
-              <p>Esta é a página de inventário. Aqui você pode gerenciar produtos e estoque.</p>
+          <h1 className="text-2xl font-semibold mb-6">Inventário</h1>
+          
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12">
+              <InventoryCard />
             </div>
           </div>
         </main>

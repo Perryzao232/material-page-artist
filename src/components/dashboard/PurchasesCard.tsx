@@ -3,9 +3,9 @@ import React from 'react';
 import { Eye } from 'lucide-react';
 
 const purchasesData = [
-  { vendor: 'Vendor name', material: 'Marble name', quantity: '63', date: '12/01/2020', status: 'Delivered' },
-  { vendor: 'Vendor name', material: 'Sandstone name', quantity: '07', date: '12/02/2020', status: 'Delayed' },
-  { vendor: 'Vendor name', material: 'Granite name', quantity: '23', date: '13/02/2020', status: 'Delayed' },
+  { supplier: 'Stones max', material: 'Marble name', quantity: '12', date: '01/01/2025', status: 'Overdue' },
+  { supplier: 'Stones max', material: 'Sandstone name', quantity: '02', date: '12/02/2025', status: 'Overdue' },
+  { supplier: 'The machine', material: 'Granite name', quantity: '05', date: '15/02/2025', status: 'Overdue' },
 ];
 
 const PurchasesCard = () => {
@@ -24,7 +24,7 @@ const PurchasesCard = () => {
       <table className="dashboard-table">
         <thead>
           <tr>
-            <th>Vendor name</th>
+            <th>Supplier name</th>
             <th>Material name</th>
             <th>Quantity</th>
             <th>Arrival date</th>
@@ -34,11 +34,11 @@ const PurchasesCard = () => {
         <tbody>
           {purchasesData.map((item, index) => (
             <tr key={index}>
-              <td>{item.vendor}</td>
+              <td>{item.supplier}</td>
               <td>{item.material}</td>
               <td>{item.quantity}</td>
               <td>{item.date}</td>
-              <td className={item.status === 'Delayed' ? 'priority-urgent' : ''}>{item.status}</td>
+              <td className="priority-urgent">{item.status}</td>
             </tr>
           ))}
         </tbody>

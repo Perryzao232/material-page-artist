@@ -4,9 +4,9 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { Eye } from 'lucide-react';
 
 const data = [
-  { name: 'Testing (143 quotes)', value: 45, color: '#4caf50' },
-  { name: 'Won (273 quotes)', value: 27, color: '#e25563' },
-  { name: 'Lost (722 quotes)', value: 28, color: '#ffc107' }
+  { name: 'Waiting (1643 quotes)', value: 56, color: '#ffffff' },
+  { name: 'Won (723 quotes)', value: 25, color: '#4caf50' },
+  { name: 'Lost (723 quotes)', value: 19, color: '#e25563' }
 ];
 
 const QuotesCard = () => {
@@ -38,6 +38,8 @@ const QuotesCard = () => {
                 outerRadius={70}
                 paddingAngle={2}
                 dataKey="value"
+                startAngle={90}
+                endAngle={-270}
               >
                 {data.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
@@ -62,6 +64,10 @@ const QuotesCard = () => {
             </div>
           ))}
         </div>
+      </div>
+      
+      <div className="mt-2 text-right">
+        <span className="see-more">More details</span>
       </div>
     </div>
   );

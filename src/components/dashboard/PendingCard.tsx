@@ -3,9 +3,9 @@ import React from 'react';
 import { Eye } from 'lucide-react';
 
 const pendingData = [
-  { id: '12871310', customer: 'Customer name', location: 'Kitchen', days: '14 days', priority: 'Urgent' },
-  { id: '42861316', customer: 'Customer name', location: 'Bathroom', days: '14 days', priority: 'Urgent' },
-  { id: '21346232', customer: 'Customer name', location: 'Stairs', days: '152 days', priority: 'Medium' }
+  { id: '07127456', customer: 'Customer name', location: 'Kitchen', days: '29 days', priority: 'Unsigned' },
+  { id: '46915746', customer: 'Customer name', location: 'Bathroom', days: '34 days', priority: 'Unsigned' },
+  { id: '28114522', customer: 'Customer name', location: 'Stairs', days: '162 days', priority: 'Unsigned' }
 ];
 
 const PendingCard = () => {
@@ -14,9 +14,10 @@ const PendingCard = () => {
       <div className="dashboard-card-header">
         <div className="dashboard-card-title">
           <span className="w-2 h-2 rounded-full bg-white"></span>
-          Pending to ship
+          Pending to sing
         </div>
-        <div>
+        <div className="flex items-center">
+          <div className="avatar bg-pink-600 mr-2">V</div>
           <Eye size={18} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
         </div>
       </div>
@@ -25,10 +26,10 @@ const PendingCard = () => {
         <thead>
           <tr>
             <th>Project Id</th>
-            <th>Customer</th>
+            <th>Customer name</th>
             <th>Location</th>
-            <th>Time</th>
-            <th>Priority</th>
+            <th>Days</th>
+            <th>Sign</th>
           </tr>
         </thead>
         <tbody>
@@ -38,7 +39,7 @@ const PendingCard = () => {
               <td>{item.customer}</td>
               <td>{item.location}</td>
               <td>{item.days}</td>
-              <td className={`priority-${item.priority.toLowerCase()}`}>{item.priority}</td>
+              <td className="priority-urgent">{item.priority}</td>
             </tr>
           ))}
         </tbody>

@@ -29,35 +29,33 @@ const Index = () => {
         <Header />
         
         <main className="p-6">
+          <h1 className="text-2xl font-semibold mb-6">Fusion dashboard</h1>
+          
           <div className="grid grid-cols-12 gap-6">
             {/* First row */}
-            <div className="col-span-12 md:col-span-4 opacity-0 animate-fade-in" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
+            <div className="col-span-12 md:col-span-5 opacity-0 animate-fade-in" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
               <QuotesCard />
             </div>
             
-            <div className="col-span-12 md:col-span-4 opacity-0 animate-fade-in" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
-              <PendingCard />
-            </div>
-            
-            <div className="col-span-12 md:col-span-4 opacity-0 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+            <div className="col-span-12 md:col-span-7 opacity-0 animate-fade-in" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
               <ProjectsCard />
             </div>
             
             {/* Second row */}
-            <div className="col-span-12 md:col-span-6 opacity-0 animate-fade-in" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
-              <SchedulingCard />
+            <div className="col-span-12 md:col-span-5 opacity-0 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+              <PendingCard />
             </div>
             
-            <div className="col-span-12 md:col-span-6 opacity-0 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
+            <div className="col-span-12 md:col-span-7 opacity-0 animate-fade-in" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
               <PendenciesCard />
             </div>
             
             {/* Third row */}
-            <div className="col-span-12 md:col-span-6 opacity-0 animate-fade-in" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
+            <div className="col-span-12 md:col-span-5 opacity-0 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
               <InventoryCard />
             </div>
             
-            <div className="col-span-12 md:col-span-6 opacity-0 animate-fade-in" style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}>
+            <div className="col-span-12 md:col-span-7 opacity-0 animate-fade-in" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
               <PurchasesCard />
             </div>
           </div>

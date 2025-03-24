@@ -3,9 +3,9 @@ import React from 'react';
 import { Eye } from 'lucide-react';
 
 const pendencies = [
-  { id: '346157436', part: 'Broken part', location: 'Kitchen sink', days: '14 days', status: 'Pending' },
-  { id: '12346232', part: 'Process stopped', location: 'Fireplace veneer', days: '48 days', status: 'Waiting' },
-  { id: '346157236', part: 'Scratch', location: 'Bathroom closet', days: '96 days', status: 'Manufacturing' }
+  { id: '11298326', cause: 'Broken part', location: 'Kitchen sink', customer: 'Silvia Maria', project: 'Kitchen sink' },
+  { id: '15485232', cause: 'Process stopped', location: 'Fireplace warm', customer: 'Tom Hanks', project: 'Fireplace warm' },
+  { id: '36987526', cause: 'Scratch', location: 'Bathroom clean', customer: 'Maria Teodora', project: 'Bathroom clean' }
 ];
 
 const PendenciesCard = () => {
@@ -28,7 +28,7 @@ const PendenciesCard = () => {
         </div>
         <div className="w-1/2 stat-card">
           <div className="flex items-center justify-center">
-            <div className="text-2xl font-bold mr-1">Alarming number of</div>
+            <div className="text-lg font-bold">Alarming number of</div>
           </div>
           <div className="stat-label">pendencies</div>
         </div>
@@ -38,20 +38,18 @@ const PendenciesCard = () => {
         <thead>
           <tr>
             <th>Project Id</th>
-            <th>Part</th>
-            <th>Location</th>
-            <th>Days</th>
-            <th>Status</th>
+            <th>Cause</th>
+            <th>Project name</th>
+            <th>Customer name</th>
           </tr>
         </thead>
         <tbody>
           {pendencies.map((item, index) => (
             <tr key={index}>
               <td>{item.id}</td>
-              <td>{item.part}</td>
-              <td>{item.location}</td>
-              <td>{item.days}</td>
-              <td>{item.status}</td>
+              <td>{item.cause}</td>
+              <td>{item.project}</td>
+              <td>{item.customer}</td>
             </tr>
           ))}
         </tbody>

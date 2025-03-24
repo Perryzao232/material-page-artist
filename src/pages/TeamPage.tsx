@@ -12,11 +12,13 @@ const TeamPage = () => {
         <Header />
         
         <main className="p-6">
-          <div className="bg-dashboard-card p-6 rounded-lg shadow-lg">
-            <h1 className="text-2xl font-bold mb-6">Equipe</h1>
-            
-            <div className="space-y-6">
-              <p>Esta é a página da equipe. Aqui você pode gerenciar membros e suas funções.</p>
+          <h1 className="text-2xl font-semibold mb-6">Equipe</h1>
+          
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 bg-dashboard-card p-6 rounded-lg shadow-lg">
+              <div className="space-y-6">
+                <p>Esta é a página da equipe. Aqui você pode gerenciar membros e suas funções.</p>
+              </div>
             </div>
           </div>
         </main>
